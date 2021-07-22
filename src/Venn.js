@@ -9,7 +9,6 @@ import * as venn from "venn.js";
 import * as d3 from "d3";
 import FullVenn from './Full-venn';
 import Calendar from './Calendar';
-import { StayPrimaryLandscape } from "@material-ui/icons";
 import Data from './Data';
 
 const useStyles = makeStyles({
