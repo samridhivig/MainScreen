@@ -1,8 +1,6 @@
 import "./styles.css";
 import UpSetJS, {
-  VennDiagram,
-  extractCombinations,
-  ISetLike
+  extractCombinations
 } from "@upsetjs/react";
 import elems from './ModifiedVennData.js'
 import { useState } from 'react';
