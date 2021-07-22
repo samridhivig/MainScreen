@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.App-header {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.App-venn {
+  position: relative;
+  width: 100%;
+}
+
+.App-calendar {
+  position: relative;
+  width: 100%;
+}
+
+.App-checkbox {
+  display: "flex";
+  flex-direction: "column";
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+FormGroup {
+  background-color: red;
+  display: "flex";
+  flex-direction: "column";
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+FormControlLabel {
+  background-color: red;
+  display: "flex";
+  flex-direction: "column";
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.positive {
+  color: green;
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 13%;
+  font-size: 1rem;
+}
+
+.pain {
+  color: #800080;
+  position: absolute;
+  margin-left: 70%;
+  margin-top: 13%;
+  font-size: 1rem;
+}
+
+.fatigue {
+  color: #d5b60a;
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 60%;
+  font-size: 1rem;
+}
+
+.negative {
+  color: red;
+  position: absolute;
+  margin-left: 75%;
+  margin-top: 65%;
+  font-size: 1rem;
+}

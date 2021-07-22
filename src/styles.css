@@ -1,0 +1,9 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+UpSetJS {
+  margin-top: 100px;
+  transform: rotate(90deg);
+}
