@@ -1,12 +1,10 @@
 import "./styles.css";
-import UpSetJS, {
+import {
   VennDiagram,
-  extractCombinations,
-  ISetLike,
-  mergeColors
+  extractCombinations
 } from "@upsetjs/react";
 import elems from "./ModifiedVennData.js";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 
 export default function App() {
   const { sets, combinations } = extractCombinations(elems);
