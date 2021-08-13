@@ -25,7 +25,6 @@ export default function App() {
         onHover={setSelection}
         width={500}
         height={300}
-        selectionColor=""
       />
     </div>
   );
