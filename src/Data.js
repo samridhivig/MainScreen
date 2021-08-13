@@ -51,7 +51,7 @@ class Data extends React.Component{
         {
           size: 13,
           sets: ["Positive"],
-          label: "11",
+          label: "13",
           dates : [4,5,6,10,11,12,13,20,21,22,25,26,27]
           //label: "Positive"
         },
