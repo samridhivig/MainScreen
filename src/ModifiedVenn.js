@@ -28,12 +28,12 @@ export default function App() {
   const temp2 = " days of "
   return (
     <div className="App">
-      <h1> Monthly Overview </h1>
+      <h2> Monthly Overview </h2>
       <VennDiagram
         sets={sets}
         selection={selection}
         onHover={setSelection}
-        width={500}
+        width={400}
         height={300}
       />
       {
