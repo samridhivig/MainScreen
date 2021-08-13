@@ -5,7 +5,7 @@ import {
 } from "@upsetjs/react";
 import elems from "./ModifiedVennData.js";
 import { useState } from "react";
-import { ContactSupportOutlined } from "@material-ui/icons";
+import { ContactSupportOutlined, Smartphone } from "@material-ui/icons";
 
 String.prototype.replaceAll = function(str1, str2, ignore) 
 {
@@ -22,8 +22,10 @@ export default function App() {
   }, []);
   const combinations = useMemo(() => ({ mergeColors }), []); */
    
-  const temp = selection.name;
-  const new_temp = temp.replaceAll('∩',',');
+  //const temp = selection.name;
+  //const new_temp = temp.replaceAll('∩',',');
+  const temp = " "
+  const temp2 = " days of "
   return (
     <div className="App">
       <h1> Monthly Overview </h1>
@@ -37,7 +39,7 @@ export default function App() {
       {
         console.log("img:",selection)
       }
-      <p> {selection.cardinality} days of {new_temp} </p>
+     <p> {selection == null ? temp : selection.cardinality + temp2 + selection.name} </p> 
     </div>
   );
 }
