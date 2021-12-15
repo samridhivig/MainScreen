@@ -103,7 +103,7 @@ class FullVenn extends React.Component {
     // transform to the entire venn diagram 
     //div.selectAll("text").attr("transform", `translate(120, -80) rotate(25)`);
     div.selectAll("text").style("fill","black");
-    //div.selectAll("g").attr("transform", `translate(-70,20) rotate(-25)`);
+    // div.selectAll("g").attr("transform", `translate(-70,20) rotate(-25)`);
 
     //tooltip
     var tooltip = d3
@@ -129,10 +129,10 @@ class FullVenn extends React.Component {
           .duration(400)
           .style("opacity", 0.8)
           .style("display", "inline-block")
-          .text(`${i.size} days of ${i.sets}`)
-          .style("visibility", "visible");
+          .text(`${i?.size} days of ${i.sets}`)
+          .style("visibility", "visible")
 
-          div.selectAll("text").style("fill", "black");
+        div.selectAll("text").style("fill", "black");
         
         // highlight the current path
         var selection = d3.select(this).transition("tooltip").duration(400);
@@ -144,8 +144,9 @@ class FullVenn extends React.Component {
       })
 
       .on("mousemove", function(d) {
+        // tooltip positioning
         tooltip.style("left", (d.pageX - 100) + "px")
-               .style("top", (d.pageY - 80) + "px");
+               .style("top", (d.pageY - 140) + "px");
     }) 
 
       .on("mouseout", function (d, i) {

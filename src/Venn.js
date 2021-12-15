@@ -139,29 +139,29 @@ function App() {
       {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="fatigue">Fatigue</p> }
       {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="negative">Negative</p> }
       <div className="App-venn"> 
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.FullVennSets} /> }
-      {state.checkedPositive === true && state.checkedNegative === false && state.checkedPain === true && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.PosPainFatigueSets} />}
-      {state.checkedPositive === false && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.NegPainFatigueSets} />}
-      {state.checkedPositive === false && state.checkedNegative === false && state.checkedPain === true && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.PainFatigueSets} />}
-      {state.checkedPositive === true && state.checkedNegative === false && state.checkedPain === true && state.checkedFatigue === false
-      && <FullVenn callbackFromParent={getDates} Data={Data.PosPainSets} />}
-      {state.checkedPositive === true && state.checkedNegative === false && state.checkedPain === false && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.PosFatigueSets} />}
-      {state.checkedPositive === false && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === false
-      && <FullVenn callbackFromParent={getDates} Data={Data.NegPainSets} />}
-      {state.checkedPositive === false && state.checkedNegative === true && state.checkedPain === false && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.NegFatigueSets} />}
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === false
-      && <FullVenn callbackFromParent={getDates} Data={Data.PosNegPainSets} />}
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === false && state.checkedFatigue === true
-      && <FullVenn callbackFromParent={getDates} Data={Data.PosNegFatigueSets} />}
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.FullVennSets} /> }
+        {state.checkedPositive === true && state.checkedNegative === false && state.checkedPain === true && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.PosPainFatigueSets} />}
+        {state.checkedPositive === false && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.NegPainFatigueSets} />}
+        {state.checkedPositive === false && state.checkedNegative === false && state.checkedPain === true && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.PainFatigueSets} />}
+        {state.checkedPositive === true && state.checkedNegative === false && state.checkedPain === true && state.checkedFatigue === false
+        && <FullVenn callbackFromParent={getDates} Data={Data.PosPainSets} />}
+        {state.checkedPositive === true && state.checkedNegative === false && state.checkedPain === false && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.PosFatigueSets} />}
+        {state.checkedPositive === false && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === false
+        && <FullVenn callbackFromParent={getDates} Data={Data.NegPainSets} />}
+        {state.checkedPositive === false && state.checkedNegative === true && state.checkedPain === false && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.NegFatigueSets} />}
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === false
+        && <FullVenn callbackFromParent={getDates} Data={Data.PosNegPainSets} />}
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === false && state.checkedFatigue === true
+        && <FullVenn callbackFromParent={getDates} Data={Data.PosNegFatigueSets} />}
       </div>
       <div className="App-calendar">
-      <Calendar Dates={dates} />
+        <Calendar Dates={dates} />
       </div>
     </div>
   );
