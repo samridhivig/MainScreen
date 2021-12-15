@@ -3,6 +3,20 @@
   text-align: center;
 }
 
+.app--header {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  background-color: hotpink;
+  padding: 20px;
+}
+
+.app--header > li a {
+  color: white;
+  text-decoration: none;
+}
+
+
 UpSetJS {
   margin-top: 100px;
   transform: rotate(90deg);

@@ -61,14 +61,15 @@ function App() {
               name="checkedPositive"
               color="primary"
               style={{
-                transform: "scale(0.9)",
+                transform: "scale(1)",
+                color: "hotpink"
             }}
             />
           }
-          label="Positive"
+          label={<span style={{ fontSize: '1rem' }}>Positive</span>}
         />
 
-<FormControlLabel
+      <FormControlLabel
           classes={{
               label: classes.label, 
               icon: classes.icon,
@@ -81,11 +82,12 @@ function App() {
               name="checkedNegative"
               color="primary"
               style={{
-                transform: "scale(0.9)",
+                transform: "scale(1)",
+                color: "hotpink"
             }}
             />
           }
-          label="Negative"
+          label={<span style={{ fontSize: '1rem' }}>Negative</span>}
         />
 
 <FormControlLabel
@@ -101,11 +103,12 @@ function App() {
               name="checkedPain"
               color="primary"
               style={{
-                transform: "scale(0.9)",
+                transform: "scale(1)",
+                color: "hotpink"
             }}
             />
           }
-          label="Pain"
+          label={<span style={{ fontSize: '1rem' }}>Pain</span>}
         />
 
 <FormControlLabel
@@ -121,11 +124,12 @@ function App() {
               name="checkedFatigue"
               color="primary"
               style={{
-                transform: "scale(0.9)",
+                transform: "scale(1)",
+                color: "hotpink"
             }}
             />
           }
-          label="Fatigue"
+          label={<span style={{ fontSize: '1rem' }}>Fatigue</span>}
         />
 
       </FormGroup>
