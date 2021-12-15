@@ -395,51 +395,56 @@ function Calendar(props) {
         arr.push({"dayName" : dayName, "date" : day, "data": data[day-1]});
     }
     //console.log("dates in caleendar", dates);
-    var renderedOutput = arr.map(item => props.Dates != undefined && props.Dates.includes(item.date) ? 
+    var renderedOutput = arr.map(item => props.Dates !== undefined && props.Dates.includes(item.date) ? 
         // highlight the cell if item.date == 12
-        <div className="gridItems" style={{backgroundColor: "lightgray"}}> <div className="dayName"> {item.dayName} </div> <div className="date"> {item.date} </div>
-        <div className="barCharts"> 
-        <Container>
-      <MainContainer>
-        {  item.data.map(({ distance, colors }, i) => {
-          return (
-            <BarChartContainer key={i}>
-              <MakeBar height={distance * 2} colors={colors} />
-            </BarChartContainer>
-          );
-        }) 
-        }
-      </MainContainer>
-    </Container> 
+        <div className="gridItems__highlighted"> 
+          <div className="dayName"> {item.dayName} </div> 
+          <div className="date"> {item.date} </div>
+          <div className="barCharts"> 
+            <Container>
+              <MainContainer>
+                {  item.data.map(({ distance, colors }, i) => {
+                    return (
+                      <BarChartContainer key={i}>
+                        <MakeBar height={distance * 2} colors={colors} />
+                      </BarChartContainer>
+                    );
+                  }) 
+                }
+              </MainContainer>
+            </Container> 
+          </div>
         </div>
-    </div>
         :
         // else don't highlight the cell 
-    <div className="gridItems"> <div className="dayName"> {item.dayName} </div> <div className="date"> {item.date} </div>
-        <div className="barCharts"> 
-        <Container>
-      <MainContainer>
-        {  item.data.map(({ distance, colors }, i) => {
-          return (
-            <BarChartContainer key={i}>
-              <MakeBar height={distance * 2} colors={colors} />
-            </BarChartContainer>
-          );
-        }) 
-        }
-      </MainContainer>
-    </Container> 
-        </div>
-    </div> );
+        <div className="gridItems"> 
+          <div className="dayName"> {item.dayName} </div> 
+          <div className="date"> {item.date} </div>
+          <div className="barCharts"> 
+            <Container>
+              <MainContainer>
+                {  item.data.map(({ distance, colors }, i) => {
+                    return (
+                      <BarChartContainer key={i}>
+                        <MakeBar height={distance * 2} colors={colors} />
+                      </BarChartContainer>
+                    );
+                  }) 
+                }
+              </MainContainer>
+            </Container> 
+          </div>
+        </div> 
+    );
 
 
 
     return (
         <div className="Calendar">
-            <p> April 2021 </p>
-            <div className="app-calendar">
+          <p> January 2022 </p>
+          <div className="app-calendar">
             {renderedOutput}
-            </div>
+          </div>
         </div>
     )
 }
