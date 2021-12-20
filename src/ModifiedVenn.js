@@ -1,10 +1,12 @@
 import "./styles.css";
+import "./ModifiedVenn.css";
 import {
   VennDiagram,
   extractCombinations
 } from "@upsetjs/react";
 import elems from "./ModifiedVennData.js";
 import { useState } from "react";
+import Calendar from './Calendar';
 
 export default function App() {
   const { sets, combinations } = extractCombinations(elems);
@@ -18,8 +20,7 @@ export default function App() {
    
   //const temp = selection.name;
   //const new_temp = temp.replaceAll('∩',',');
-  const temp = " "
-  const temp2 = " days of "
+
   return (
     <div className="App">
       <h2> Monthly Overview </h2>
@@ -30,10 +31,10 @@ export default function App() {
         width={400}
         height={300}
       />
-      {
-        console.log("img:",selection)
-      }
-     <p> {selection == null ? temp : selection.cardinality + temp2 + selection.name} </p> 
+     <p> {selection == null ? " " : (selection.cardinality !== undefined) ? selection.cardinality + " days of " + selection.name.replaceAll('∩', ',') : " "} </p> 
+     <div className="App-calendar">
+        <Calendar Dates={selection?.elems?.[0]?.dates} />
+      </div>
     </div>
   );
 }
