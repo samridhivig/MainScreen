@@ -87,8 +87,22 @@ class FullVenn extends React.Component {
   }
 
   chart = venn.VennDiagram().width(300).height(300).styled(false);
+
+  getTooltipText (setSize, sets) {
+    console.log('here', sets, setSize);
+    const totalNumberOfDays = 27;
+    const percentageOfDays = Math.round((setSize / totalNumberOfDays) * 100);
+    if (sets.length === 1) {
+      return `${setSize} (${percentageOfDays}%) days of ${sets[0]}`;
+    } else if (sets.length > 1) {
+      return `${setSize} (${percentageOfDays}%) days of ${sets.join(', ')}`;
+    }
+
+    return '';
+  }  
   
   componentDidMount() {
+    const that = this;
     var callbackFromParent = this.props.callbackFromParent;
     let div = d3.select(this.chartView);
     div.datum(this.props.Data).call(this.chart);
@@ -97,7 +111,7 @@ class FullVenn extends React.Component {
     .style("fill-opacity", 0.3)
     .style("stroke-opacity", 0)
     .style("stroke", "rgba(22,22,22,1)")
-    .style("stroke-width", 2)
+    .style("stroke-width", 0)
     .style("transform-origin", "50% 50%");
 
     // transform to the entire venn diagram 
@@ -127,9 +141,12 @@ class FullVenn extends React.Component {
         tooltip
           .transition()
           .duration(400)
-          .style("opacity", 0.8)
+          .style("opacity", 1)
+          .style("background-color", '#232F34') // tooltip background color
+          .style("color", '#FFFFFF')  // tooltip text string color
           .style("display", "inline-block")
-          .text(`${i?.size} days of ${i.sets}`)
+          .text(that.getTooltipText(i?.size, i.sets))
+          // .text(`${i?.size} days of ${i.sets}`)
           .style("visibility", "visible")
 
         div.selectAll("text").style("fill", "black");
@@ -138,7 +155,7 @@ class FullVenn extends React.Component {
         var selection = d3.select(this).transition("tooltip").duration(400);
         selection.select("path")
             .style("fill-opacity", 0.8)
-            .style("stroke-opacity", 0.4)
+            .style("stroke-opacity", 0.7)
             .style("transform", "scale(1.01,1.01)")
             .style("transform-origin", "50% 50%");
       })
