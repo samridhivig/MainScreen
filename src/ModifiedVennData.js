@@ -75,42 +75,6 @@ var sets = [
   }
 ];
 
-var sets2 = [
-  {
-    sets: ["Negative", "Pain", "Fatigue"]
-  },
-  {
-    sets: ["Negative", "Pain"]
-  },
-  {
-    sets: ["Negative", "Fatigue"]
-  },
-  {
-    sets: ["Positive", "Pain", "Fatigue"]
-  },
-  {
-    sets: ["Positive", "Pain"]
-  },
-  {
-    sets: ["Positive", "Fatigue"]
-  },
-  {
-    sets: ["Pain", "Fatigue"]
-  },
-  {
-    sets: ["Positive"]
-  },
-  {
-    sets: ["Negative"]
-  },
-  {
-    sets: ["Pain"]
-  },
-  {
-    sets: ["Fatigue"]
-  }
-];
-
 var elems = [];
 
 function createElems(sets) {
