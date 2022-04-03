@@ -1,9 +1,9 @@
-import highNegative from "./assets/moods/HighNegative.png";
-import mediumNegative from "./assets/moods/MediumNegative.png";
-import neutral from "./assets/moods/NeutralMood.png";
-import mediumPositive from "./assets/moods/MediumPositive.png";
-import highPositive from "./assets/moods/HighPositive.png";
-import nextButton from "./assets/NextButton.png";
+import highNegative from "../assets/moods/HighNegative.png";
+import mediumNegative from "../assets/moods/MediumNegative.png";
+import neutral from "../assets/moods/NeutralMood.png";
+import mediumPositive from "../assets/moods/MediumPositive.png";
+import highPositive from "../assets/moods/HighPositive.png";
+import nextButton from "../assets/NextButton.png";
 
 import "./InputScreen.scss";
 

@@ -1,4 +1,4 @@
-import InputMoodScreen from "./InputMoodScreen";
+import InputMoodScreen from "./InputScreens/InputMoodScreen.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,11 +10,11 @@ export default function MainScreen() {
 
   return (
     <div>
-      <h2> Input Screen</h2>
+      <h2>Input Screen</h2>
   
       <Router>
         <button>
-          <Link to="/Mood"> Add Data</Link>
+          <Link to="/Mood">Add Data</Link>
         </button>
         <Switch>
           <Route path="/Mood">

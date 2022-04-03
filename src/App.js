@@ -10,7 +10,6 @@ import Venn from './Venn';
 import ModifiedVenn from './ModifiedVenn';
 import UpSet from './UpSet';
 import MainScreen from "./MainScreen";
-import InputMoodScreen from "./InputMoodScreen";
 
 export default function App() {
 
