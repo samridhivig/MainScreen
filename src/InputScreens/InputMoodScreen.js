@@ -7,6 +7,10 @@ import nextButton from "../assets/NextButton.png";
 
 import "./InputScreen.scss";
 
+import {
+  Link
+} from "react-router-dom";
+
 export default function InputMoodScreen() {
 
   function itemClicked(propertyName) {
@@ -54,9 +58,10 @@ export default function InputMoodScreen() {
         </div>
       </div>
 
-
       <div className="next-button-container">
-        <img className="next-button--image" src={nextButton} alt="Next Button" onClick={() => itemClicked("highPositive")} />
+        <Link to="/Fatigue">
+          <img className="next-button--image" src={nextButton} alt="Next Button" />
+        </Link>
       </div>
     </div>
   );

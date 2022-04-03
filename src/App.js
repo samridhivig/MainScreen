@@ -10,6 +10,8 @@ import Venn from './Venn';
 import ModifiedVenn from './ModifiedVenn';
 import UpSet from './UpSet';
 import MainScreen from "./MainScreen";
+import InputFatigueScreen from "./InputScreens/InputFatigueScreen.js";
+import InputMoodScreen from "./InputScreens/InputMoodScreen.js";
 
 export default function App() {
 
@@ -40,6 +42,12 @@ export default function App() {
           </Route>
           <Route path="/UpSet">
             <UpSet />
+          </Route>
+          <Route path="/Mood">
+            <InputMoodScreen />
+          </Route>
+          <Route path="/Fatigue">
+            <InputFatigueScreen />
           </Route>
         </Switch>
 

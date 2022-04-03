@@ -12,7 +12,7 @@ export default function InputFatigueScreen() {
 
   return (
     <div>
-      <h2> Fatigue </h2>
+      <h2> Pain </h2>
 
       <div className="item-options">
         <div className="item">
@@ -29,7 +29,7 @@ export default function InputFatigueScreen() {
       </div>
 
       <div className="next-button-container">
-        <Link to="/Pain">
+        <Link to="/">
           <img className="next-button--image" src={nextButton} alt="Next Button" />
         </Link>
       </div> 

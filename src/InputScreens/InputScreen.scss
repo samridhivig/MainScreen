@@ -8,6 +8,7 @@
   .item {
     cursor: pointer;
     width: 100px;
+    margin: auto;
 
     .item--image-container {
       position: relative;
@@ -28,12 +29,18 @@
      margin-top: 10px;
      font-weight: bold;
     }
+
+    .item--alone-text {
+      font-size: 20px;
+      margin-top: 80px;
+      font-weight: bold;
+     }
   }
 }
 
 .next-button-container {
   width: 5 * 100px;
-  margin-top: 30%;
+  margin-top: 20%;
   margin-left: auto;
   margin-right: auto;
 }
