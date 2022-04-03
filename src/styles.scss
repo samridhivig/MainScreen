@@ -9,6 +9,7 @@
   list-style-type: none;
   background-color: hotpink;
   padding: 20px;
+  margin-bottom: 64px;
 }
 
 .app--header > li a {
@@ -19,4 +20,12 @@
 UpSetJS {
   margin-top: 100px;
   transform: rotate(90deg);
+}
+
+.main-screen-container {
+  .add-button-container {
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

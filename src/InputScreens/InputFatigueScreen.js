@@ -11,7 +11,7 @@ export default function InputFatigueScreen() {
   }
 
   return (
-    <div>
+    <div className="input-screen-container">
       <h2> Fatigue </h2>
 
       <div className="item-options">

@@ -18,7 +18,7 @@ export default function InputMoodScreen() {
   }
 
   return (
-    <div>
+    <div className="input-screen-container">
       <h2> Mood </h2>
 
       <div className="item-options">

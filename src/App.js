@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.scss";
 import Button from '@material-ui/core/Button';
 import {
   BrowserRouter as Router,
@@ -10,8 +10,9 @@ import Venn from './Venn';
 import ModifiedVenn from './ModifiedVenn';
 import UpSet from './UpSet';
 import MainScreen from "./MainScreen";
-import InputFatigueScreen from "./InputScreens/InputFatigueScreen.js";
 import InputMoodScreen from "./InputScreens/InputMoodScreen.js";
+import InputFatigueScreen from "./InputScreens/InputFatigueScreen.js";
+import InputPainScreen from "./InputScreens/InputPainScreen.js";
 
 export default function App() {
 
@@ -34,6 +35,9 @@ export default function App() {
         </ul>
 
         <Switch>
+          <Route exact path="/">
+            <MainScreen />
+          </Route>
           <Route path="/Venn">
             <Venn />
           </Route>
@@ -49,11 +53,12 @@ export default function App() {
           <Route path="/Fatigue">
             <InputFatigueScreen />
           </Route>
+          <Route path="/Pain">
+            <InputPainScreen />
+          </Route>
         </Switch>
-
       </Router>
-
-      <MainScreen />
+  
     </div>
   );
 }

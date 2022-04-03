@@ -1,46 +1,51 @@
-.item-options {
-  width: 5 * 100px;
-  display: flex;
-  flex-direction: row;
+.input-screen-container {
+  position: relative;
   margin: auto;
-  margin-top: 20px;
 
-  .item {
-    cursor: pointer;
-    width: 100px;
+  .item-options {
+    width: 5 * 100px;
+    display: flex;
+    flex-direction: row;
     margin: auto;
+    margin-top: 20px;
 
-    .item--image-container {
-      position: relative;
+    .item {
+      cursor: pointer;
       width: 100px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin: auto;
 
-      .item--image {
-        position: absolute;
-        bottom: 0;
+      .item--image-container {
+        position: relative;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .item--image {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+
+      .item--text {
+      font-size: 13px;
+      margin-top: 10px;
+      font-weight: bold;
+      }
+
+      .item--alone-text {
+        font-size: 20px;
+        margin-top: 80px;
+        font-weight: bold;
       }
     }
-
-    .item--text {
-     font-size: 13px;
-     margin-top: 10px;
-     font-weight: bold;
-    }
-
-    .item--alone-text {
-      font-size: 20px;
-      margin-top: 80px;
-      font-weight: bold;
-     }
   }
-}
 
-.next-button-container {
-  width: 5 * 100px;
-  margin-top: 20%;
-  margin-left: auto;
-  margin-right: auto;
+  .next-button-container {
+    width: 5 * 100px;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
