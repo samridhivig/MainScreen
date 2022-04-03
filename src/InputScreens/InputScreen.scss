@@ -4,7 +4,7 @@
   margin-top: 64px;
 
   .item-options {
-    width: 5 * 100px;
+    max-width: 5 * 100px;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -12,15 +12,14 @@
 
     .item {
       cursor: pointer;
-      width: 100px;
-      margin: auto;
+      max-width: 100px;
+      position: relative;
 
       .item--image-container {
         position: relative;
         width: 100px;
         height: 30px;
         display: flex;
-        align-items: center;
         justify-content: center;
 
         .item--image {
@@ -30,9 +29,9 @@
       }
 
       .item--text {
-      font-size: 13px;
-      margin-top: 10px;
-      font-weight: bold;
+        font-size: 13px;
+        margin-top: 10px;
+        font-weight: bold;
       }
 
       .item--alone-text {
