@@ -22,7 +22,7 @@ export default function App() {
       {/* <Button variant="contained" color="primary">Modified Venn</Button> */}
       {/* <Button variant="contained" color="primary">UpSet</Button> */}
       <Router> 
-        <ul class="app--header">
+        <ul className="app--header">
           <li>
             <Link to="/Venn">Venn</Link>
           </li>

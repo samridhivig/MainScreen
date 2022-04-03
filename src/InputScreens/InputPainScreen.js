@@ -3,11 +3,35 @@ import nextButton from "../assets/NextButton.png";
 import {
   Link
 } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function InputFatigueScreen() {
 
+  const initialState = {
+    isNoneClicked: false,
+    isMediumClicked: false,
+    isHighClicked: false
+  };
+
+  const [inputState, setInputState] = useState(initialState);
+
+  useEffect(() => { setInputState(inputState) }, [ inputState ] )
+
+  function isAnyItemSelected() {
+    return Object.values(inputState).some((elem) => elem === true);
+  } 
+
   function itemClicked(propertyName) {
-    console.log('clicked', propertyName);
+
+    if (propertyName === "none") {
+      setInputState({ ...inputState, isNoneClicked: !inputState.isNoneClicked });
+    } else if (propertyName === "medium") {
+      setInputState({ ...inputState, isMediumClicked: !inputState.isMediumClicked });
+    } else {
+      setInputState({ ...inputState, isHighClicked: !inputState.isHighClicked });
+    }
+
+    isAnyItemSelected() && setInputState(initialState);
   }
 
   return (
@@ -15,16 +39,16 @@ export default function InputFatigueScreen() {
       <h2> Pain </h2>
 
       <div className="item-options">
-        <div className="item">
-          <p className="item--alone-text" onClick={() => itemClicked("highNegative")}> none </p>
+        <div className={`item ${inputState.isNoneClicked ? "item-alone__highlighted" : ""}`}>
+          <p className="item--alone-text" onClick={() => itemClicked("none")}> none </p>
         </div>
 
-        <div className="item">
-          <p className="item--alone-text" onClick={() => itemClicked("mediumNegative")}> medium </p>
+        <div className={`item ${inputState.isMediumClicked ? "item-alone__highlighted" : ""}`}>
+          <p className="item--alone-text" onClick={() => itemClicked("medium")}> medium </p>
         </div>
 
-        <div className="item">
-          <p className="item--alone-text" onClick={() => itemClicked("neutral")}> high </p>
+        <div className={`item ${inputState.isHighClicked ? "item-alone__highlighted" : ""}`}>
+          <p className="item--alone-text" onClick={() => itemClicked("high")}> high </p>
         </div>
       </div>
 

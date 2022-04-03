@@ -14,6 +14,16 @@
       cursor: pointer;
       max-width: 100px;
       position: relative;
+      margin-left: auto;
+      margin-right: auto;
+
+      &.item__highlighted {
+        outline: solid black 2px;
+      }
+
+      &.item-alone__highlighted {
+        color: red;
+      }
 
       .item--image-container {
         position: relative;
