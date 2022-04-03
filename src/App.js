@@ -42,7 +42,7 @@ export default function App() {
             <Venn />
           </Route>
           <Route path="/ModifiedVenn">
-              <ModifiedVenn /> 
+            <ModifiedVenn /> 
           </Route>
           <Route path="/UpSet">
             <UpSet />

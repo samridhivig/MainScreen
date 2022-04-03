@@ -23,7 +23,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <h2> Monthly Overview </h2>
+      <div className="App-header">
+        <p>Monthly Overview</p>
+      </div>
       <VennDiagram
         sets={sets}
         selection={selection}

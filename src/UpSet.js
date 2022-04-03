@@ -12,7 +12,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1> Monthly Overview</h1>
+      <div className="App-header">
+        <p>Monthly Overview</p>
+      </div>
       <UpSetJS
         sets={sets}
         combinations={combinations}
