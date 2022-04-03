@@ -27,7 +27,7 @@
 
       .item--image-container {
         position: relative;
-        width: 100px;
+        max-width: 100px;
         height: 30px;
         display: flex;
         justify-content: center;
@@ -53,7 +53,7 @@
   }
 
   .next-button-container {
-    width: 5 * 100px;
+    max-width: 5 * 100px;
     margin-top: 20%;
     margin-left: auto;
     margin-right: auto;
