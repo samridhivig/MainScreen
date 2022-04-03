@@ -38,7 +38,6 @@ function App() {
   };
 
   function getDates(Dates){
-    console.log('here', Dates);
     setDate(Dates);
   }
 

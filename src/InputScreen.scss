@@ -1,0 +1,39 @@
+.item-options {
+  width: 5 * 100px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 20px;
+
+  .item {
+    cursor: pointer;
+    width: 100px;
+
+    .item--image-container {
+      position: relative;
+      width: 100px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item--image {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .item--text {
+     font-size: 13px;
+     margin-top: 10px;
+     font-weight: bold;
+    }
+  }
+}
+
+.next-button-container {
+  width: 5 * 100px;
+  margin-top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}

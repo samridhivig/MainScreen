@@ -9,6 +9,8 @@ import {
 import Venn from './Venn';
 import ModifiedVenn from './ModifiedVenn';
 import UpSet from './UpSet';
+import MainScreen from "./MainScreen";
+import InputMoodScreen from "./InputMoodScreen";
 
 export default function App() {
 
@@ -18,24 +20,24 @@ export default function App() {
       {/* <Button variant="contained" color="primary">Modified Venn</Button> */}
       {/* <Button variant="contained" color="primary">UpSet</Button> */}
       <Router> 
-      <ul class="app--header">
-            <li>
-              <Link to="/Venn">Venn</Link>
-            </li>
-            <li>
-              <Link to="/ModifiedVenn">Modified Venn</Link>
-            </li>
-            <li>
-              <Link to="/UpSet">UpSet</Link>
-            </li>
-      </ul>
+        <ul class="app--header">
+          <li>
+            <Link to="/Venn">Venn</Link>
+          </li>
+          <li>
+            <Link to="/ModifiedVenn">Modified Venn</Link>
+          </li>
+          <li>
+            <Link to="/UpSet">UpSet</Link>
+          </li>
+        </ul>
 
-      <Switch>
+        <Switch>
           <Route path="/Venn">
             <Venn />
           </Route>
           <Route path="/ModifiedVenn">
-             <ModifiedVenn /> 
+              <ModifiedVenn /> 
           </Route>
           <Route path="/UpSet">
             <UpSet />
@@ -43,6 +45,8 @@ export default function App() {
         </Switch>
 
       </Router>
+
+      <MainScreen />
     </div>
   );
 }
