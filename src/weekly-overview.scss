@@ -1,0 +1,9 @@
+.weekly-overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .highcharts-wrapper {
+    margin-top: 30px;
+  }
+}
