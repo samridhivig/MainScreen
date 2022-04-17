@@ -2,7 +2,6 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import "./weekly-overview.scss";
-import { NONAME } from 'dns';
 
 
 export default function WeeklyOverview() {

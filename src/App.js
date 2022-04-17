@@ -13,6 +13,8 @@ import MainScreen from "./MainScreen";
 import InputMoodScreen from "./InputScreens/InputMoodScreen.js";
 import InputFatigueScreen from "./InputScreens/InputFatigueScreen.js";
 import InputPainScreen from "./InputScreens/InputPainScreen.js";
+import WeeklyOverview from "./weekly-overview";
+import HighchartsVennOverview from "./highcharts-venn-overview";
 
 export default function App() {
 
@@ -55,6 +57,12 @@ export default function App() {
           </Route>
           <Route path="/Pain">
             <InputPainScreen />
+          </Route>
+          <Route path="/WeekOverview">
+            <WeeklyOverview />
+          </Route>
+          <Route path="/HighchartsVennOverview">
+            <HighchartsVennOverview />
           </Route>
         </Switch>
       </Router>
