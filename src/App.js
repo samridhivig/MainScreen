@@ -22,22 +22,25 @@ export default function App() {
   const [navBarState, toggleNavBar] = useState(false);
 
   var toggleBar = navBarState ?
+  <>
+  <div className='overlay' onClick={() => toggleNavBar(!navBarState)} />
   <div className="topnav">
     <Link className='nav-link' to="/Venn">Euler</Link>
     <Link className='nav-link' to="/ModifiedVenn">Symmetric Venn</Link>
     <Link className='nav-link' to="/UpSet">UpSet</Link>
   </div>
+  </>
   :
   ''
 
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
         {/* top nav menu to navigate between difference visualisations */}
         <div onClick={() => toggleNavBar(!navBarState)}>
           <img className="hamburger-icon" src={Hamburger} alt="Add button" />
         </div>
-        <span className="month-title">AUGUST 2022</span>
+        <span className="month-title">SEPTEMBER 2022</span>
 
         {toggleBar}
 
@@ -73,7 +76,7 @@ export default function App() {
 
         <ul className="app--footer">
           <li>
-            <Link to="/WeekOverview">Week Overview</Link>
+            <Link to="/WeekOverview">Weekly Overview</Link>
           </li>
           <li>
             <Link className="add-icon" to="/">
