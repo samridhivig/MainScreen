@@ -23,17 +23,19 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="App-header">
+      {/* <div className="App-header">
         <p>Monthly Overview</p>
-      </div>
+      </div> */}
       <VennDiagram
         sets={sets}
         selection={selection}
         onHover={setSelection}
-        width={400}
+        width={350}
         height={300}
       />
-     <p> {selection == null ? " " : (selection.cardinality !== undefined) ? selection.cardinality + " days of " + selection.name.replaceAll('∩', ',') : " "} </p> 
+      <div className="modified-venn-tooltip">
+        <p> {selection == null ? " " : (selection.cardinality !== undefined) ? selection.cardinality + " days of " + selection.name.replaceAll('∩', ',') : " "} </p> 
+      </div>
      <div className="App-calendar">
         <Calendar Dates={selection?.elems?.[0]?.dates} />
       </div>

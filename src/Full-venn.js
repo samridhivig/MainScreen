@@ -91,7 +91,7 @@ class FullVenn extends React.Component {
       .on("mousemove", function(d) {
         // tooltip positioning
         tooltip.style("left", (d.pageX - 100) + "px")
-               .style("top", (d.pageY - 140) + "px");
+               .style("top", (d.pageY - 100) + "px");
     }) 
 
       .on("mouseout", function (d, i) {
