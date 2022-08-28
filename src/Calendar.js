@@ -400,18 +400,21 @@ function Calendar(props) {
     //const [dates, setDate] = useState([]);
     //useEffect(() => { setDate(props.Dates )}, [props.Dates]);
     //useEffect(() => { console.log("this dates in calendar", props.Dates)}, [props.Dates]);
-    const daysInMonth = getDaysInMonth(9, 2022);
+
+    // Month + Year
+    const daysInMonth = getDaysInMonth(8, 2022);
     
     // get starting spot for the first day of month
     const firstDayOfMonth = daysInMonth[0].getDay();
+    const lastDayOfMonth = daysInMonth[daysInMonth.length - 1].getDate();
     var dayGridValuesArray = [];
-    let count = 1;
+    let cellNumber = 1;
     for(let day = 1; day <= 35; day++) {
-      if (day < firstDayOfMonth) {
+      if (day < firstDayOfMonth || cellNumber > lastDayOfMonth) {
         dayGridValuesArray.push({"date" : '', "data": []});
       } else {
-        dayGridValuesArray.push({"date" : count, "data": data[day-1]});
-        count ++;
+        dayGridValuesArray.push({"date" : cellNumber, "data": data[day-1]});
+        cellNumber ++;
       }
     }
     
@@ -438,7 +441,7 @@ function Calendar(props) {
     return (
       <div className='calendar'>
         <div className="month-indicator">
-          <span> September 2020 </span>
+          <span> August 2020 </span>
         </div>
         <div className="day-of-week">
           <div>M</div>

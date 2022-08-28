@@ -42,7 +42,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App-main">
       <div className="App-header">
       <p>Monthly Overview</p>
       </div>
@@ -134,10 +134,12 @@ function App() {
 
       </FormGroup>
       </div>
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="positive"> Positive </p> }
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="pain">Pain</p> }
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="fatigue">Fatigue</p> }
-      {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="negative">Negative</p> }
+      <div className="App-labels">
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="positive"> Positive </p> }
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="pain">Pain</p> }
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="fatigue">Fatigue</p> }
+        {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true && <p className="negative">Negative</p> }
+      </div>
       <div className="App-venn"> 
         {state.checkedPositive === true && state.checkedNegative === true && state.checkedPain === true && state.checkedFatigue === true
         && <FullVenn callbackFromParent={getDates} Data={Data.FullVennSets} /> }

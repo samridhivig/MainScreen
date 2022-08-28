@@ -5,14 +5,6 @@
   padding: 0;
 }
 
-.App {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  justify-content: center;
-  font-family: "Montserrat", sans-serif;
-}
-
 .App-header {
   background-color: black;
   padding-top: 20px;
@@ -21,14 +13,17 @@
   color: white;
 }
 
-.App-venn {
-  position: relative;
+/* .App {
+  text-align: center;
+  position: absolute;
   width: 100%;
-}
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+} */
 
-.App-calendar {
-  position: relative;
-  width: 100%;
+.App-main {
+  display: flex;
+  flex-direction: column;
 }
 
 .App-checkbox {
@@ -36,6 +31,14 @@
   flex-direction: "column";
   justify-content: space-around;
   align-items: flex-end;
+}
+
+.App-venn {
+  padding-bottom: 24px;
+}
+
+.App-calendar {
+  
 }
 
 FormGroup {
