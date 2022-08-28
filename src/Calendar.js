@@ -440,17 +440,17 @@ function Calendar(props) {
 
     return (
       <div className='calendar'>
-        <div className="month-indicator">
+        {/* <div className="month-indicator">
           <span> August 2020 </span>
-        </div>
+        </div> */}
         <div className="day-of-week">
-          <div>M</div>
-          <div>T</div>
-          <div>W</div>
-          <div>T</div>
-          <div>F</div>
-          <div>S</div>
-          <div>S</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Tue</div>
+          <div>Fri</div>
+          <div>Sat</div>
+          <div>Sun</div>
         </div>
         <div className="date-grid">
           {renderedOutput}

@@ -15,8 +15,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     width: '100%',
     height: '100%',
-    padding: '5px',
-},
+  },
     label: {
       fontSize: '13px',
   },
@@ -34,7 +33,6 @@ function App() {
  
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
-    console.log("toggle pressed");
   };
 
   function getDates(Dates){
@@ -43,9 +41,9 @@ function App() {
 
   return (
     <div className="App-main">
-      <div className="App-header">
-      <p>Monthly Overview</p>
-      </div>
+      {/* <div className="App-header">
+      <p>August 2022</p>
+      </div> */}
       <div className="App-checkbox">
       <FormGroup className={classes.root} row>
         <FormControlLabel

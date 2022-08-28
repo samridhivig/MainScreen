@@ -1,5 +1,4 @@
 import "./styles.scss";
-import Button from '@material-ui/core/Button';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,26 +14,32 @@ import InputFatigueScreen from "./InputScreens/InputFatigueScreen.js";
 import InputPainScreen from "./InputScreens/InputPainScreen.js";
 import WeeklyOverview from "./weekly-overview";
 import HighchartsVennOverview from "./highcharts-venn-overview";
+import { useState } from "react";
+import Hamburger from "./assets/hamburger.png"
+import AddButton from "./assets/AddButton.png"
 
 export default function App() {
+  const [navBarState, toggleNavBar] = useState(false);
+
+  var toggleBar = navBarState ?
+  <div className="topnav">
+    <Link className='nav-link' to="/Venn">Euler</Link>
+    <Link className='nav-link' to="/ModifiedVenn">Symmetric Venn</Link>
+    <Link className='nav-link' to="/UpSet">UpSet</Link>
+  </div>
+  :
+  ''
 
   return (
     <div className="App">
-      {/* <Button variant="contained" color="primary">Venn</Button> */}
-      {/* <Button variant="contained" color="primary">Modified Venn</Button> */}
-      {/* <Button variant="contained" color="primary">UpSet</Button> */}
-      <Router> 
-        <ul className="app--header">
-          <li>
-            <Link to="/Venn">Venn</Link>
-          </li>
-          <li>
-            <Link to="/ModifiedVenn">Modified Venn</Link>
-          </li>
-          <li>
-            <Link to="/UpSet">UpSet</Link>
-          </li>
-        </ul>
+      <Router>
+        {/* top nav menu to navigate between difference visualisations */}
+        <div onClick={() => toggleNavBar(!navBarState)}>
+          <img className="hamburger-icon" src={Hamburger} alt="Add button" />
+        </div>
+        <span className="month-title">AUGUST 2022</span>
+
+        {toggleBar}
 
         <Switch>
           <Route exact path="/">
@@ -65,7 +70,19 @@ export default function App() {
             <HighchartsVennOverview />
           </Route>
         </Switch>
+
+        <ul className="app--footer">
+          <li>
+            <Link to="/WeekOverview">Week Overview</Link>
+          </li>
+          <li>
+            <Link className="add-icon" to="/">
+              <img className="add-icon" src={AddButton} alt="Add button" />
+            </Link>
+          </li>
+        </ul>
       </Router>
+  
   
     </div>
   );
