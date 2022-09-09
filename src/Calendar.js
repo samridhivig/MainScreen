@@ -402,7 +402,7 @@ function Calendar(props) {
     //useEffect(() => { console.log("this dates in calendar", props.Dates)}, [props.Dates]);
 
     // Month + Year
-    const daysInMonth = getDaysInMonth(9, 2022);
+    const daysInMonth = getDaysInMonth(8, 2022);
     
     // get starting spot for the first day of month
     const firstDayOfMonth = daysInMonth[0].getDay();
@@ -420,7 +420,7 @@ function Calendar(props) {
     
     var renderedOutput = dayGridValuesArray.map((_, index) => 
       <div className={`day ${props.Dates?.includes(dayGridValuesArray[index].date) ? "day--highlighted" : ''}`}>
-        <span className='dayNumber'>{dayGridValuesArray[index]?.date}</span>
+        <span className={`dayNumber ${dayGridValuesArray[index].date === 27 ? "today" : ''}`}>{dayGridValuesArray[index]?.date}</span>
         <div className="barCharts"> 
           <Container>
             <MainContainer>

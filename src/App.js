@@ -40,7 +40,7 @@ export default function App() {
         <div onClick={() => toggleNavBar(!navBarState)}>
           <img className="hamburger-icon" src={Hamburger} alt="Add button" />
         </div>
-        <span className="month-title">SEPTEMBER 2022</span>
+        <span className="month-title">AUGUST 2022</span>
 
         {toggleBar}
 
@@ -76,12 +76,13 @@ export default function App() {
 
         <ul className="app--footer">
           <li>
-            <Link to="/WeekOverview">Weekly Overview</Link>
+            <Link className="add-icon" to="/">
+              Add Data
+              {/* <img className="add-icon" src={AddButton} alt="Add button" /> */}
+            </Link>
           </li>
           <li>
-            <Link className="add-icon" to="/">
-              <img className="add-icon" src={AddButton} alt="Add button" />
-            </Link>
+            <Link to="/WeekOverview">Weekly Overview</Link>
           </li>
         </ul>
       </Router>
